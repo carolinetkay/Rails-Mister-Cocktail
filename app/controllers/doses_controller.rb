@@ -29,4 +29,3 @@ private
 def dose_params
   params.require(:dose).permit(:description, :ingredient_id)
 end
-
