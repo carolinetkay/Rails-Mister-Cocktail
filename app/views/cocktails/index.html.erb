@@ -1,38 +1,19 @@
-<%# Navigation Bar %>
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to cocktails_path, class: "navbar-brand" do %>
-    <i class="fas fa-glass-cheers"></i>
-  <% end %>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <%= link_to "Home", cocktails_index_path , class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "+ Add Cocktail", cocktails_new_path , class: "nav-link" %>
-      </li>
-    </ul>
-  </div>
-</div>
-
 <%# Banner %>
-<div class="banner mb-3 text-white" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/800x600/?cocktail);">
+<div class="banner mb-3 text-white" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://static.thehoneycombers.com/wp-content/uploads/sites/2/2015/11/IMG_0037.jpg);">
   <div class="container">
     <h1>Welcome to Crazy Cocktail Bar!</h1>
     <p>If you're not crazy yet, you need another drink ;)</p>
   </div>
 </div>
 
-<%= link_to '+ Add a new Cocktail', cocktails_new_path, class: 'btn btn-primary' %>
+<%= link_to '+ Add a new Cocktail', cocktails_new_path, class: 'btn btn-primary ml-5 mt-3' %>
 <br>
 <br>
+<div class="cards">
 <% @cocktails.each do |c| %>
-  <li>
-    <%= link_to c.name, cocktail_path(c) %>
-  </li>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random/400x300/?cocktail)">
+  <%= link_to c.name, cocktail_path(c) %>
+  </div>
 <% end %>
+</div>
+
