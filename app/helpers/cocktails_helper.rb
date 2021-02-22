@@ -15,6 +15,6 @@ module CocktailsHelper
     url = base_url + cocktail.name
     read_url = open(url).read
     parsed = JSON.parse(read_url)
-    @photo = parsed['drinks'][0]['strDrinkThumb']
+    @photo_url = parsed['drinks'][0]['strDrinkThumb']
   end
 end

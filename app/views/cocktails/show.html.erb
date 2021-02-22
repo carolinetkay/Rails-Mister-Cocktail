@@ -5,7 +5,8 @@
   <div class="container">
     <% if @cocktail.photo.attached? %>
       <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
-    <% else retrieve_photo(@cocktail) %>
+    <% else %>
+      <img src="<%= retrieve_photo(@cocktail) %>" alt = "<%= @cocktail.name %>" width="400" height="400">
     <% end %>
     <br>
     <br>
