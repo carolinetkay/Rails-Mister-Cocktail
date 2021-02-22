@@ -12,16 +12,16 @@ puts "Let\'s make some 'seedy' ingredients for your drinks~"
 # Ingredient.destroy_all
 
 puts "Preparing some fresh ingredients..."
-# Ingredient.create(name: "lemon")
-# Ingredient.create(name: "ice")
-# Ingredient.create(name: "mint leaves")
-# Ingredient.create(name: "olive")
-# Ingredient.create(name: "bitters")
-# Ingredient.create(name: "rum")
-# Ingredient.create(name: "vodka")
-# Ingredient.create(name: "gin")
-# Ingredient.create(name: "whiskey")
-# Ingredient.create(name: "dry vermouth")
+Ingredient.create(name: "lemon slices")
+Ingredient.create(name: "ice")
+Ingredient.create(name: "mint leaves")
+Ingredient.create(name: "olive")
+Ingredient.create(name: "bitters")
+Ingredient.create(name: "rum")
+Ingredient.create(name: "vodka")
+Ingredient.create(name: "gin")
+Ingredient.create(name: "whiskey")
+Ingredient.create(name: "dry vermouth")
 Ingredient.create(name: "campari")
 Ingredient.create(name: "sweet vermouth")
 
