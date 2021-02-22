@@ -4,6 +4,8 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 16px;
     margin: 10px 50px;
+    max-width: 1000px;
+    min-width: 350px;
 }
 
 // Smallest device
