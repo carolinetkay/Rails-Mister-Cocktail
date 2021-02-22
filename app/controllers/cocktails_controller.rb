@@ -4,10 +4,6 @@ require 'json'
 class CocktailsController < ApplicationController
   def index
     @cocktails = Cocktail.all
-    # url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita'
-    # read_url = open(url).read
-    # parsed = JSON.parse(read_url)
-    # @image_url = parsed['drinks'][0]['strImageSource']
   end
 
   def show

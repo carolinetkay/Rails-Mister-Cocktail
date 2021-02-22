@@ -1,12 +1,29 @@
 <br>
-<h1><%= @cocktail.name %></h1>
-<br>
-<%# add an image below %>
-<%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
-<%# add a description below %>
-<h3>Ingredients</h3>
-<% @cocktail.doses.each do |d| %>
-<li><%= d.ingredient.name.capitalize %> - <%= d.description %></li>
-<% end %>
-<br>
-<%= link_to '+ Add an ingredient', new_cocktail_dose_path(@cocktail) %>
+<div class="container min-vh-100">
+  <h1><%= @cocktail.name %></h1>
+  <br>
+  <div class="container">
+    <% if @cocktail.photo.attached? %>
+      <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+    <% else retrieve_photo(@cocktail) %>
+    <% end %>
+    <br>
+    <br>
+    <h3>Ingredients</h3>
+    <% @cocktail.doses.each do |d| %>
+      <li><%= d.ingredient.name.capitalize %> - <%= d.description %></li>
+    <% end %>
+    <br>
+    <%= link_to '+ Add an ingredient', new_cocktail_dose_path(@cocktail) %>
+    <br>
+    <br>
+    <h3>How to make a <%= @cocktail.name %></h3>
+    <% retrieve_instructions(@cocktail) %>
+    <% instructions = @instructions.split(".") %>
+    <% instructions.each_with_index do |i, index| %>
+      <%= index + 1 %>. <%= i %>
+      <br>
+    <% end %>
+    <br>
+  </div>
+</div>

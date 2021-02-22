@@ -1,8 +1,12 @@
-<br>
+<div class="container min-vh-100 mt-5">
 <h1>Add a new ingredient for <%= @cocktail.name %></h1>
-
+<br>
 <%= simple_form_for [@cocktail, @dose] do |f| %>
   <%= f.association :ingredient, collection: Ingredient.order(:name), prompt: "Choose an Ingredient" %>
+  <br>
   <%= f.input :description %>
+  <br>
+  <br>
   <%= f.button :submit, class: 'btn btn-primary' %>
 <% end %>
+</div>
