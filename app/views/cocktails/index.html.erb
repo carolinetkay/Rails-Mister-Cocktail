@@ -13,7 +13,8 @@
 
 <div class="cards">
 <% @cocktails.each do |c| %>
-  <div class="card-category flex-column" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<% @image_url %>)">
+  <div class="card-category flex-column" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= c.image_url %>)">
+ 
   <%= link_to c.name, cocktail_path(c), class: 'text-white' %>
   <%= link_to 'delete', cocktail_path(c), method: :delete, class: 'font-italic  text-white small' %>
   </div>
