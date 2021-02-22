@@ -3,7 +3,7 @@
   <h1><%= @cocktail.name %></h1>
   <br>
   <div class="container">
-      <%= render_photo(@cocktail) %>
+  <%= render_photo_html(@cocktail) %>
     <br>
     <br>
     <h3>Ingredients</h3>
@@ -15,8 +15,8 @@
     <br>
     <br>
     <h3>How to make a <%= @cocktail.name %></h3>
-    <% retrieve_instructions(@cocktail) %>
-    <% instructions = @instructions.split(".") %>
+    <% call_cocktail_api(@cocktail, 'strInstructions') %>
+    <% instructions = @results.split(".") %>
     <% instructions.each_with_index do |i, index| %>
       <%= index + 1 %>. <%= i %>
       <br>
