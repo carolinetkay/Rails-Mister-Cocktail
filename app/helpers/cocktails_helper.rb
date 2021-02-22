@@ -27,3 +27,4 @@ module CocktailsHelper
       raw("<img src=\"#{@results}\" alt=\"#{@cocktail.name}\" width=\"400\" height=\"400\">")
     end
   end
+end

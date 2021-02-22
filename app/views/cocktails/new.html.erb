@@ -2,7 +2,7 @@
 <h1>Fancy yourself a new cocktail recipe?</h1>
 <br>
 <%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name %>
+  <%= f.input :name, collection: ['Martini', 'Moscow Mule', 'Manhattan', 'Mojito', 'Negroni', 'Daiquiri', 'Margarita', 'Gin And Tonic', 'Whiskey Sour', 'Classic Old-Fashioned'] %>
   <br>
   <%= f.input :photo, as: :file %>
   <br>
